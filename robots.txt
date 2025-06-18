@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: https://hiksongomesadvogado.com.br/sitemap.xml
+
