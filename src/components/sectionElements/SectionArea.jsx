@@ -3,12 +3,13 @@ import { Children } from "react";
 
 export default function SectionArea({
   children,
-  className,
+  className = "",
   id,
   paddingtop = true,
   paddingbot = true,
   paddingTopAndBottom,
   spaceShapeDiv,
+  style = {}, // default vazio
 }) {
   SectionArea.propTypes = {
     children: PropTypes.any,
@@ -17,6 +18,7 @@ export default function SectionArea({
     paddingtop: PropTypes.bool,
     paddingbot: PropTypes.bool,
     paddingTopAndBottom: PropTypes.bool,
+    style: PropTypes.object,
   };
 
   if (paddingTopAndBottom === false) {
@@ -28,11 +30,11 @@ export default function SectionArea({
   const paddingTopp = paddingtop ? "pt-[64px] desktop1:pt-[96px]" : "";
   const paddingBottom = paddingbot ? "pb-[64px] desktop1:pb-[96px]" : "";
 
-
   return (
     <div
       id={id}
       className={`w-full flex flex-col items-center ${paddingTopp} ${paddingBottom} ${paddingTopAndBottom} ${className}`}
+      style={style}
     >
       {childrenArray}
     </div>

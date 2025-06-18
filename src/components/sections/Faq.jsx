@@ -7,6 +7,7 @@ import MotionDivDownToUp from "../animation/MotionDivDownToUp";
 import SectionWrapper from "../sectionElements/SectionWrapper";
 import AccordionExpandDefault from "../interactives/AcordionTwo";
 import Button from "../interactives/Button";
+import BgCta from "../../assets/imgs/paralaxe/bgParalaxe3.jpg";
 
 export default function Faq({ colorMode }) {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ export default function Faq({ colorMode }) {
   const bgClasses = {
     dark: "bg-bgSectionOpacityDark",
     light: "bg-bgSectionOpacityLight",
-    default: "squares",
+    default: "", // removido 'squares'
   };
   const textClasses = {
     dark: "text-white",
@@ -26,7 +27,14 @@ export default function Faq({ colorMode }) {
 
   return (
     <>
-      <SectionArea id="faq" className={`${bgClass}`}>
+      <SectionArea
+        className={`${bgClass}`}
+        style={{
+          backgroundImage: `url(${BgCta})`,
+          backgroundRepeat: "repeat",
+          backgroundSize: "auto",
+        }}
+      >
         <SectionHeader
           colorMode="dark"
           className="text-center"

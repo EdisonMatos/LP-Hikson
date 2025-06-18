@@ -7,24 +7,34 @@ import SectionHeader from "../sectionElements/SectionHeader";
 import SectionWrapper from "../sectionElements/SectionWrapper";
 import MotionDivDownToUp from "../animation/MotionDivDownToUp";
 import IconButtonFeatureCard from "../cards/IconButtonFeatureCard";
+import BgCta from "../../assets/imgs/paralaxe/bgParalaxe3.jpg";
+
 
 export default function FeaturesParagraphs({ modal, colorMode }) {
   // Classes de tema
   const bgClasses = {
     dark: "bg-bgSectionOpacityDark",
     light: "bg-bgSectionOpacityLight",
-    default: "squares",
+    default: "", // removido 'squares'
   };
   const textClasses = {
     dark: "text-white",
     light: "text-black",
-    default: "bg-bgSectionDark",
+    default: "text-black",
   };
   const bgClass = bgClasses[colorMode] || bgClasses.default;
   const textClass = textClasses[colorMode] || textClasses.default;
+
   return (
     <>
-      <SectionArea id="service" className={`${bgClass} `}>
+      <SectionArea
+        className={`${bgClass}`}
+        style={{
+          backgroundImage: `url(${BgCta})`,
+          backgroundRepeat: "repeat",
+          backgroundSize: "auto",
+        }}
+      >
         <SectionHeader
           colorMode="dark"
           className="text-center"
