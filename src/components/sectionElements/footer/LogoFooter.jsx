@@ -9,7 +9,7 @@ function LogoFooter() {
         <img
           src={content.texts.navbar.logo.img}
           alt={content.texts.navbar.logo.alt}
-          className="max-h-[88px] w-auto bg-white p-3 rounded-md"
+          className="max-h-[88px] w-auto "
           // className="max-h-[88px] w-auto bg-bgSectionLight p-[12px]"
         ></img>
       </div>

@@ -34,6 +34,7 @@ export default function Faq({ colorMode }) {
           backgroundRepeat: "repeat",
           backgroundSize: "auto",
         }}
+        id="faq"
       >
         <SectionHeader
           colorMode="dark"

@@ -55,6 +55,7 @@ export default function AboutInstagram({
               type="article"
               titleColorSet={textClass}
               subtitleColorSet={textClass}
+              miniTitleTextColor="text-white"
             />
           </MotionDivDownToUp>
           <ParagraphsAboutSocial colorMode={colorMode} />
