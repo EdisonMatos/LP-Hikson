@@ -34,6 +34,7 @@ export default function FeaturesParagraphs({ modal, colorMode }) {
           backgroundRepeat: "repeat",
           backgroundSize: "auto",
         }}
+        id="service"
       >
         <SectionHeader
           colorMode="dark"

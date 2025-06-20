@@ -127,8 +127,8 @@ const content = {
       miniTag: "ADVOGADO EM PARAUAPEBAS - PA",
       title: (
         <h1 className="mb-[16px]">
-          Por trás de cada caso,
-          <span className="text-primary"> um impacto real</span>
+          Por trás de cada caso, um impacto real
+          <span className="text-primary"> </span>
         </h1>
       ),
       subtitle:
