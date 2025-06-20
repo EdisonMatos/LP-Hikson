@@ -16,7 +16,7 @@ import BlogPosts from "../components/sections/BlogPosts";
 
 export default function Index() {
   // Altere esta constante para: 'default', 'light' ou 'dark'
-  const colorMode = "light";
+  const colorMode = "default";
 
   return (
     <>

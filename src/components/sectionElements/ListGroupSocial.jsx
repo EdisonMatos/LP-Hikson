@@ -53,7 +53,6 @@ export default function ListGroupSocial({ colorMode = "default" }) {
             className="relative font-semibold cursor-pointer"
             spy={true}
             smooth={true}
-            
             duration={500}
             offset={-50}
           >
@@ -74,15 +73,15 @@ export default function ListGroupSocial({ colorMode = "default" }) {
           <Button
             aria-label={content.texts.hero.ctaButtonAriaLabel}
             label="Contato"
-            className=""
-            textclassName="text-paragraph3"
+            className="bg-darker"
+            textclassName="text-paragraph3 text-white"
             size="small"
             icon={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
                 height="18"
-                fill="currentColor"
+                fill="white"
                 className="bi bi-whatsapp"
                 viewBox="0 0 18 18"
               >

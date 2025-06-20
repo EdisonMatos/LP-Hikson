@@ -8,7 +8,7 @@ import { useState, useEffect, useRef } from "react";
 import SidebarSocial from "../sectionElements/SidebarSocial";
 import ListGroupSocial from "../sectionElements/ListGroupSocial";
 
-export default function NavbarSocial({ colorMode }) {
+export default function NavbarSocial({ colorMode="light" }) {
   const navigate = useNavigate();
   const [scrolling, setScrolling] = useState(false);
   const [showListGroup, setShowListGroup] = useState(true);
@@ -79,10 +79,10 @@ export default function NavbarSocial({ colorMode }) {
   }, []);
 
   const getNavbarClasses = () => {
-    if (colorMode === "light") {
+    if (colorMode = "light") {
       return scrolling
         ? "bg-bgSectionOpacityLight shadow-md"
-        : "bg-transparent desktop1:bg-transparent";
+        : "bg-white desktop1:bg-white";
     }
     if (colorMode === "dark") {
       return scrolling
@@ -116,7 +116,7 @@ export default function NavbarSocial({ colorMode }) {
               className={`${
                 scrolling
                   ? " w-[50%] max-w-[60%] tablet2:w-[45%] tablet2:max-w-[60%] desktop1:w-[50%] transition-all duration-1000 "
-                  : " my-[20px] w-[70%] tablet1:w-[70%] tablet2:w-[65%] desktop1:w-[70%] desktop2:w-[90%] transition-all duration-1000 "
+                  : " my-[20px] w-[70%] tablet1:w-[70%] tablet2:w-[65%] desktop1:w-[70%] desktop2:w-[70%] transition-all duration-1000 "
               } tablet3:mb-0`}
             />
           </ScrollLink>
@@ -127,8 +127,10 @@ export default function NavbarSocial({ colorMode }) {
                 aria-label={content.texts.hero.ctaButtonAriaLabel}
                 label={content.texts.navbar.ctaButtonTextResponsive}
                 size="small"
-                icon={<FaWhatsapp />}
+                icon={<FaWhatsapp color="white" />}
                 colorMode={colorMode}
+                color="bg-darker"
+                textclassName="text-white"
               />
             </div>
             <div className="flex items-center desktop1:hidden">
